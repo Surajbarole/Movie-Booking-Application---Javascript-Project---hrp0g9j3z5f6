@@ -269,6 +269,13 @@ text-align: center;
 
 
 
-.movie-Description-card{
+#movie-description-card{
+    width: 500px;
+    height: 300px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    box-shadow: rgba(9, 30, 66, 0.2) 0px 2px 8px;
+    background: #8185FD;
     display: none;
+    color: black;
 }
