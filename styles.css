@@ -263,3 +263,12 @@ text-align: center;
 .payment .pay-button:hover {
     background-color: #555;
 }
+
+
+
+
+
+
+.movie-Description-card{
+    display: none;
+}

@@ -80,15 +80,51 @@ function createMovieCard(movie) {
   const movieRatings =document.createElement("p");
   movieRatings.classList.add("ratingmovie");
   movieRatings.textContent = `${movie.vote_average}`;
+
+
+
+  movieCard.addEventListener("click",(movie)=>{
+    movieDescription(movie)
+  })
+
+
+
+  
+  // const movieImage = document.createElement("img");
+  // movieImage.src = `https://image.tmdb.org/t/p/w300${movie.poster_path}`;
+  // movieImage.alt =`${movie.title} Poster`;
+  // const movieTitle =document.createElement("h2");
+  // movieTitle.textContent =movie.title;
+  
+  // const movieLanguage =document.createElement("p");
+  // movieLanguage.classList.add("lang");
+    // movieLanguage.textContent = `${movie.original_language}`;
+
+    // const movieRatings =document.createElement("p");
+    // movieRatings.classList.add("ratingmovie");
+    // movieRatings.textContent = `${movie.vote_average}`;
+  
+
+
+
+
+
   movieCard.appendChild(movieImage);
   movieCard.appendChild(movieTitle);
   movieCard.appendChild(movieLanguage);
   movieCard.appendChild(movieRatings);
-
+  
   return movieCard;
 }
 
-
+function movieDescription(movie){
+  console.log(movie);
+  const movieCard = document.createElement("div");
+  movieCard.classList.add("movie-Description-card");
+  movieCard.innerHTML=movie.title
+  movieCard.style.display="block";
+  document.querySelector("#movie-description-container").appendChild(movieCard);
+}
 
 
 // !  ----GENRESLIST ---------
